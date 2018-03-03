@@ -14,8 +14,10 @@ echo "Starting YARN Services"
 
 sudo -H -u hduser $HADOOP_INSTALL/sbin/start-yarn.sh
 
+echo "Verifying the services"
+
 sudo -H -u hduser jps
 
-sudo xdg-open "http://localhost:9870/" &
+sudo wget "http://localhost:9870/" 
 
-sudo xdg-open "http://localhost:8088/" &
+sudo wget "http://localhost:8088/" 

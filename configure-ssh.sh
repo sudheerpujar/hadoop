@@ -11,12 +11,12 @@ sudo apt-get install pdsh
 
 echo "Generating Key Pairs"
 
-sudo -H -u hduser ssh-keygen -t rsa -P '' -f /home/hduser/.ssh/id-rsa
+sudo -H -u hduser ssh-keygen -t rsa -P '' -f /home/hduser/.ssh/id_rsa
 
 
 echo "Configuring passwordless ssh"
 sudo -H -u hduser chmod 0777 /home/hduser/.ssh
-sudo -H -u hduser cat /home/hduser/.ssh/id-rsa.pub>>/home/hduser/.ssh/authorized_keys
+sudo -H -u hduser cat /home/hduser/.ssh/id_rsa.pub>>/home/hduser/.ssh/authorized_keys
 sudo chown hduser:hadoop /home/hduser/.ssh/authorized_keys
 sudo -H -u hduser chmod 0600 /home/hduser/.ssh/authorized_keys
 sudo -H -u hduser chmod 0700 /home/hduser/.ssh
