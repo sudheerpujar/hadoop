@@ -11,6 +11,10 @@ echo "Verify Maven Installation"
 
 mvn -version
 
+cp  maven-settings.xml ~/.m2/settings.xml
+
 ls -ls /usr/share/maven
 
 ls -ls /etc/maven
+
+
